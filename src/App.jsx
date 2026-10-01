@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -10,7 +10,7 @@ import BookingHistory from "./pages/BookingHistory";
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -19,7 +19,7 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/history" element={<BookingHistory />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
